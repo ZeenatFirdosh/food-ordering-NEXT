@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Food Order Website
 
-## Getting Started
+## Deployed Link: https://food-ordering-next.vercel.app/
 
-First, run the development server:
+## Overview
+This project is a full-stack food ordering website developed using NEXT.js, MongoDB, NEXTAuth.js, Context API, Tailwind CSS, and Stripe payment gateway. It offers a seamless user experience with authentication features, profile editing, admin panel, menu item management, and secure payment processing.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Authentication**: Utilizes NEXTAuth.js for authentication, including Google login functionality.
+- **Profile Editing**: Users can easily edit their profiles through an intuitive interface.
+- **Admin Panel**: Includes features for category management, menu item listing, and user administration.
+- **Stripe Payment Gateway**: Provides a secure payment gateway for seamless transactions.
+- **Responsive Design**: Implemented using Tailwind CSS for a mobile-first, responsive design approach.
+- **State Management**: Utilizes Context API for efficient state management throughout the application.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Frontend**: NEXT.js, Tailwind CSS, Context API
+- **Backend**: Node.js, MongoDB
+- **Authentication**: NEXTAuth.js
+- **Payment Gateway**: Stripe
