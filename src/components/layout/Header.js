@@ -11,7 +11,7 @@ function AuthLinks({status, userName}) {
   if (status === 'authenticated') {
     return (
       <>
-        <Link href={'/profile'} className="whitespace-nowrap">
+        <Link href={'/profile'} className="whitespace-nowrap hover:text-[#fac031] hover:underline">
           Hello, {userName}
         </Link>
         <button
@@ -80,14 +80,14 @@ export default function Header() {
       )}
       <div className="hidden md:flex items-center justify-between">
         <nav className="flex items-center gap-8 text-gray-500 font-semibold">
-          <Link className="text-rose-600 font-semibold text-2xl" href={'/'}>
+          <Link className=" font-semibold text-2xl" href={'/'}>
           <Image src={"/logo.png"} width={100} height={20} />
 
           </Link>
-          <Link href={'/'}>Home</Link>
-          <Link href={'/menu'}>Menu</Link>
-          <Link href={'/#about'}>About</Link>
-          <Link href={'/#contact'}>Contact</Link>
+          <Link href={'/'} className="hover:text-[#fac031]">Home</Link>
+          <Link href={'/menu'} className="hover:text-[#fac031]">Menu</Link>
+          <Link href={'/#about'} className="hover:text-[#fac031]">About</Link>
+          <Link href={'/#contact'} className="hover:text-[#fac031]">Contact</Link>
         </nav>
         <nav className="flex items-center gap-4 text-gray-500 font-semibold">
           <AuthLinks status={status} userName={userName} />

@@ -1,5 +1,6 @@
 import Right from "@/components/icons/Right";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -7,9 +8,7 @@ export default function Hero() {
       <div className="py-8 md:py-20">
         
         <h1 className="text-4xl font-semibold">
-          Everything<br />
-          is better<br />
-          with good&nbsp;
+          Let's eat some Delicious &nbsp;
           <span className="text-[#fac031]">
             Food
           </span>
@@ -18,10 +17,10 @@ export default function Hero() {
           Tasty food is the missing piece that makes every day complete, a simple yet delicious joy in life
         </p>
         <div className="flex gap-4 text-sm">
-          <button className="flex justify-center bg-teal-500 uppercase flex items-center gap-2 text-white px-4 py-2 rounded-full">
-            Order now
+          <Link href={"/menu"}  className="flex justify-center bg-teal-500 uppercase flex items-center gap-2 text-white px-4 py-2 rounded-full">
+            Explore
             <Right />
-          </button>
+          </Link>
           <button className="flex items-center border-0 gap-2 py-2 text-gray-600 font-semibold">
             Learn more
             <Right />
