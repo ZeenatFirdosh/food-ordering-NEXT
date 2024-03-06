@@ -17,7 +17,7 @@ export default function Hero() {
           Tasty food is the missing piece that makes every day complete, a simple yet delicious joy in life
         </p>
         <div className="flex gap-4 text-sm">
-          <Link href={"/menu"}  className="flex justify-center bg-teal-500 uppercase flex items-center gap-2 text-white px-4 py-2 rounded-full">
+          <Link href={"/menu"}  className="flex justify-center bg-teal-500 hover:bg-white hover:text-rose-600 hover:border-rose-600 border-2 uppercase items-center gap-2 text-white px-4 py-2 rounded-full">
             Explore
             <Right />
           </Link>
