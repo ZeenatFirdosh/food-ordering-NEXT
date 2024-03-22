@@ -1,4 +1,5 @@
 import Header from "@/components/layout/Header";
+import About from "@/components/layout/About";
 import Hero from "@/components/layout/Hero";
 import HomeMenu from "@/components/layout/HomeMenu";
 import SectionHeaders from "@/components/layout/SectionHeaders";
@@ -8,8 +9,8 @@ export default function Home() {
     <>
       <Hero />
       <HomeMenu />
-      <section className="text-center my-16" id="about">
-        <SectionHeaders
+      <section className=" my-16" id="about">
+        {/* <SectionHeaders
           subHeader={'Our story'}
           mainHeader={'About us'}
         />
@@ -19,8 +20,10 @@ export default function Home() {
           </p>
           <p>At consectetur delectus ducimus est facere iure molestias obcaecati quaerat vitae voluptate? Aspernatur dolor explicabo iste minus molestiae pariatur provident quibusdam saepe?</p>
           <p>Laborum molestias neque nulla obcaecati odio quia quod reprehenderit sit vitae voluptates? Eos, tenetur.</p>
-        </div>
+        </div> */}
+        <About />
       </section>
+      
       <section className="text-center my-8" id="contact">
         <SectionHeaders
           subHeader={'Don\'t hesitate'}
