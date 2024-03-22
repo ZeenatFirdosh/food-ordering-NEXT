@@ -126,6 +126,6 @@ export default function MenuItem(menuItem) {
       <MenuItemTile
         onAddToCart={handleAddToCartButtonClick}
         {...menuItem} />
-    </>
+            </>
   );
 }

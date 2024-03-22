@@ -7,17 +7,17 @@ export default function MenuItemTile({ onAddToCart, ...item }) {
   const hasSizesOrExtras = sizes?.length > 0 || extraIngredientPrices?.length > 0;
   return (
     <div className=" rounded-2xl text-center bg-[#222831] group  hover:shadow-md  hover:shadow-black/25 transition-all    ">
-      <div className="text-center h-[190px] flex justify-center items-center rounded-t-2xl rounded-bl-[45px] bg-gray-100 hover:bg-white    transition-all">
-        <img src={image} className="max-h-auto max-h-24 block mx-auto group-hover:scale-105" alt="pizza" />
+      <div className="text-center h-[190px] flex justify-center items-center rounded-t-2xl rounded-bl-[45px]  bg-white    transition-all">
+        <img src={image} className="max-h-auto max-h-24 block mx-auto scale-125 group-hover:scale-150" alt="pizza" />
       </div>
       <div className="p-4 bg-[#222831] rounded-b-2xl text-white">
 
-        <h4 className="font-semibold text-xl py-3">{name}</h4>
-        <p className="text-gray-100 text-sm line-clamp-3">
+        <h4 className="font-semibold text-xl ">{name}</h4>
+        {/* <p className="text-gray-100 text-sm line-clamp-3">
           {description}
-        </p>
+        </p> */}
 
-        <div class="flex justify-between items-center mt-4">
+        <div class="flex justify-between items-center ">
           <h6>
             ${basePrice}
           </h6>
