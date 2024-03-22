@@ -30,9 +30,9 @@ export default function RegisterPage() {
   }
   return (
     <section className="mt-8">
-      <h1 className="text-center text-primary text-4xl mb-4">
+      <h3 className="text-center text-primary font-extrabold text-4xl mb-4">
         Register
-      </h1>
+      </h3>
       {userCreated && (
         <div className="my-4 text-center">
           User created.<br />
@@ -47,7 +47,7 @@ export default function RegisterPage() {
         </div>
       )}
       <form className="block max-w-xs mx-auto" onSubmit={handleFormSubmit}>
-        <input type="email" placeholder="email" value={email}
+        {/* <input type="email" placeholder="email" value={email}
                disabled={creatingUser}
                onChange={ev => setEmail(ev.target.value)} />
         <input type="password" placeholder="password" value={password}
@@ -55,9 +55,9 @@ export default function RegisterPage() {
                 onChange={ev => setPassword(ev.target.value)}/>
         <button type="submit" disabled={creatingUser}>
           Register
-        </button>
+        </button> */}
         <div className="my-4 text-center text-gray-500">
-          or login with provider
+           login with provider
         </div>
         <button
           onClick={() => signIn('google', {callbackUrl:'/'})}
