@@ -11,6 +11,9 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 export const metadata = {
   title: "Food Ordering App",
   description: "Food Ordering App",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
