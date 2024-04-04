@@ -24,13 +24,16 @@ export const authOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
+        // const user1 = { id: 1, name: 'J Smith', email: 'jsmith@example.com' }
         const email = credentials?.email;
         const password = credentials?.password;
 
         mongoose.connect(process.env.MONGO_URL);
         const user = await User.findOne({email});
         const passwordOk = user && bcrypt.compareSync(password, user.password);
-
+        // if (user1) {
+        //   return user1;
+        // }
         if (passwordOk) {
           return user;
         }
@@ -39,6 +42,31 @@ export const authOptions = {
       }
     })
   ],
+  session: {
+    strategy: 'jwt'
+  },
+  secret: process.env.SECRET,
+  // callbacks: {
+  //   async jwt(token, user) {
+  //     if (user) {
+  //       console.log(user,"user jwt");
+  //       token.id = user.id;
+  //       token.name = user.name;
+  //     }
+  //     console.log(token,"token jwt");
+  //     return token;
+  //   },
+  // },
+  // callbacks: {
+  //   async session(session, token) {
+  //     // if you need to add more info in session
+  //     console.log(token,"token session");
+  //     session.user.id = token.id;
+  //     session.user.name = token.name;
+  //     console.log(session,"session");
+  //     return session;
+  //   },
+  // },
 };
 
 export async function isAdmin() {

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function RegisterPage() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [creatingUser, setCreatingUser] = useState(false);
@@ -17,7 +18,7 @@ export default function RegisterPage() {
     setUserCreated(false);
     const response = await fetch("/api/register", {
       method: "POST",
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ name, email, password }),
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
@@ -49,7 +50,9 @@ export default function RegisterPage() {
           Please try again later
         </div>
       )}
-      {/* <form className="block max-w-xs mx-auto" onSubmit={handleFormSubmit}>
+      <form className="block max-w-xs mx-auto" onSubmit={handleFormSubmit}>
+        <input type="text" placeholder="Name" value={name} disabled={creatingUser}
+               onChange={ev => setName(ev.target.value)} />
         <input type="email" placeholder="email" value={email}
                disabled={creatingUser}
                onChange={ev => setEmail(ev.target.value)} />
@@ -59,7 +62,9 @@ export default function RegisterPage() {
         <button type="submit" disabled={creatingUser}>
           Register
         </button>
-      </form> */}
+      </form>
+
+      <hr className="mt-6 "/>
       <div className="max-w-xs mx-auto">
         <div className="my-4 text-center text-gray-500">
           login with provider
