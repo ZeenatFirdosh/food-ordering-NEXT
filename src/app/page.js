@@ -24,7 +24,7 @@ export default function Home() {
         <About />
       </section>
       
-      <section className="text-center my-8" id="contact">
+      {/* <section className="text-center my-8" id="contact">
         <SectionHeaders
           subHeader={'Don\'t hesitate'}
           mainHeader={'Contact us'}
@@ -34,7 +34,7 @@ export default function Home() {
             +91 93049 46935
           </a>
         </div>
-      </section>
+      </section> */}
 
       {/* <Testimonial /> */}
     </>
