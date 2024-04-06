@@ -1,6 +1,21 @@
-import React from "react";
+"use client"
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef();
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_ditcsii', 'template_xm6wwpd', form.current, 'mmlMWePFsnSUSzZDR')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    e.target.reset()
+  };
   return (
     <>
       <div className="relative z-10 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[120px]">
@@ -112,7 +127,7 @@ const Contact = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-lg bg-white p-8 shadow-lg dark:bg-dark-2 sm:p-12">
-                <form>
+                <form ref={form} onSubmit={sendEmail}>
                   <ContactInputBox
                     type="text"
                     name="name"
@@ -131,7 +146,7 @@ const Contact = () => {
                   <ContactTextArea
                     row="6"
                     placeholder="Your Message"
-                    name="details"
+                    name="message"
                     defaultValue=""
                   />
                   <div>
