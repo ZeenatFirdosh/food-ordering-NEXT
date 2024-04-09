@@ -28,7 +28,7 @@ export default function LoginPage() {
                onChange={ev => setPassword(ev.target.value)}/>
         <button disabled={loginInProgress} type="submit">Login</button>
       </form>
-    <hr className="mt-6"/>
+    {/* <hr className="mt-6"/>
       <div className="max-w-xs mx-auto">
         <div className="my-4 text-center text-gray-500">
           login with provider
@@ -41,7 +41,7 @@ export default function LoginPage() {
           <Image src={"/google.png"} alt={""} width={24} height={24} />
           Login with google
         </button>
-      </div>
+      </div> */}
     </section>
   );
 }

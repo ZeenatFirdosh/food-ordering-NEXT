@@ -64,7 +64,7 @@ export default function RegisterPage() {
         </button>
       </form>
 
-      <hr className="mt-6 "/>
+      {/* <hr className="mt-6 "/>
       <div className="max-w-xs mx-auto">
         <div className="my-4 text-center text-gray-500">
           login with provider
@@ -82,7 +82,7 @@ export default function RegisterPage() {
             Login here &raquo;
           </Link>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
