@@ -1,3 +1,4 @@
+'use client';
 import React, { useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
@@ -22,7 +23,7 @@ function MapLeaflet() {
       />
       {/* Additional map layers or components can be added here */}
       <Marker position={position}>
-        <Popup>Mohd Samiullah .</Popup>
+        <Popup>Zeenat Firdosh Quadri .</Popup>
       </Marker>
     </MapContainer>
   );
