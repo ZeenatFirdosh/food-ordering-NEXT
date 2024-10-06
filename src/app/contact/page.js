@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import MapLeaflet from "./MapLeaflet";
 
 const Contact = () => {
   const form = useRef();
@@ -981,10 +980,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="relative rounded-lg  h-96 ">
-        {/* <iframe width="100%" height="100%" frameBorder="0" title="map" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"></iframe> */}
-        <MapLeaflet />
-      </div>
+      
     </>
   );
 };
