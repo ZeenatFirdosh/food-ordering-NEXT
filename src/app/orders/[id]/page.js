@@ -12,7 +12,7 @@ export default function OrderPage() {
   const [loadingOrder, setLoadingOrder] = useState(true);
   const {id} = useParams();
   useEffect(() => {
-    if (typeof window.console !== "undefined") {
+    if (typeof window !== "undefined") {
       if (window.location.href.includes('clear-cart=1')) {
         clearCart();
       }
