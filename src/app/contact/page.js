@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-// import MapLeaflet from "./MapLeaflet";
+import MapLeaflet from "./MapLeaflet";
 
 const Contact = () => {
   const form = useRef();
