@@ -73,7 +73,7 @@ export default function Header() {
           className="md:hidden p-4 bg-gray-200 rounded-lg mt-2 flex flex-col gap-2 text-center">
           <Link href={'/'}>Home</Link>
           <Link href={'/menu'}>Menu</Link>
-          <Link href={'/#about'}>About</Link>
+          <Link href={'/about'}>About</Link>
           <Link href={'/contact'}>Contact</Link>
           <AuthLinks status={status} userName={userName} />
         </div>
@@ -86,7 +86,7 @@ export default function Header() {
           </Link>
           <Link href={'/'} className="hover:text-[#fac031]">Home</Link>
           <Link href={'/menu'} className="hover:text-[#fac031]">Menu</Link>
-          <Link href={'/#about'} className="hover:text-[#fac031]">About</Link>
+          <Link href={'/about'} className="hover:text-[#fac031]">About</Link>
           <Link href={'/contact'} className="hover:text-[#fac031]">Contact</Link>
         </nav>
         <nav className="flex items-center gap-4 text-gray-500 font-semibold">

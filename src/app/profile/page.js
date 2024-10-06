@@ -13,7 +13,7 @@ import toast from "react-hot-toast";
 
 export default function ProfilePage() {
   const session = useSession();
-
+  console.log("session", session);
   const [user, setUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
   const [profileFetched, setProfileFetched] = useState(false);

@@ -1,27 +1,37 @@
-"use client"
+"use client";
 import React, { useRef } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+import MapLeaflet from "./MapLeaflet";
 
 const Contact = () => {
   const form = useRef();
-  
+
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_ditcsii', 'template_xm6wwpd', form.current, 'mmlMWePFsnSUSzZDR')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_ditcsii",
+        "template_xm6wwpd",
+        form.current,
+        "mmlMWePFsnSUSzZDR"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
-    e.target.reset()
+        }
+      );
+    e.target.reset();
   };
   return (
     <>
-      <div className="relative z-10 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[120px]">
+      <div className="relative   bg-white py-20 dark:bg-dark lg:py-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap lg:justify-between">
-            <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
+            <div className="w-full px-4 lg:w-1/2 ">
               <div className="mb-12 max-w-[570px] lg:mb-0">
                 <span className="mb-4 block text-base font-semibold text-primary">
                   Contact Us
@@ -125,7 +135,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
+            <div className="w-full px-4 lg:w-1/2 ">
               <div className="relative rounded-lg bg-white p-8 shadow-lg dark:bg-dark-2 sm:p-12">
                 <form ref={form} onSubmit={sendEmail}>
                   <ContactInputBox
@@ -970,6 +980,10 @@ const Contact = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="relative rounded-lg  h-96 ">
+        {/* <iframe width="100%" height="100%" frameBorder="0" title="map" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"></iframe> */}
+        <MapLeaflet />
       </div>
     </>
   );
